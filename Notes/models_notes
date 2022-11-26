@@ -1,0 +1,60 @@
+USER:
+
+name
+surname
+password
+email
+
+has_many posts
+has_many comments
+has_many likes
+has_many friend_request
+has_many friends through friend_request
+
+
+---
+
+
+POST:
+
+title
+body
+date
+
+has_many likes
+has_many comments
+belongs_to author (user)
+
+
+---
+
+
+COMMENT:
+
+body
+date
+
+belongs_to author (user)
+
+
+---
+
+
+LIKES:
+
+belongs_to liker (user)
+belongs_to liked (post)
+
+
+---
+
+
+FRIEND_REQUEST:
+
+status [pending / accepted]
+
+belongs_to sender (user)
+belongs_to reciever (user)
+
+
+
