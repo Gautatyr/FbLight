@@ -1,2 +1,22 @@
 <div id="<%= dom_id post %>">
+
+  <div>
+    Author:
+    <%= post.author.email %>
+  </div>
+
+  <div>
+    Creation:
+    <%= post.date %>
+  </div>
+
+  <br>
+  
+  <div>
+    Title:
+    <%= post.title %>
+    <br>
+    <%= post.body %>
+  </div>
+  
 </div>
