@@ -6,11 +6,7 @@ Rails.application.routes.draw do
   
 
   devise_for :users, :controllers => { registrations: 'users/registrations' }
-
-
-
-
-  #resources :users
+  resources :users
 
   resources :likes, only: [:create, :destroy]
   root "users#new"
